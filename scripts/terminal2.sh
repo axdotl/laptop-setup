@@ -6,10 +6,10 @@ sudo apt-get install fonts-powerline
 echo "Setup OhMyZsh - https://ohmyz.sh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo "Set Theme to agnoster"
-sed -i 's/ZSH_THEME=.*/ZSH_THEME="agnoster"/g' ~/.zshrc
+echo "Install Powerlevel10k"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-echo "Setup Solarized color"
-git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git ~/.solarized
-cd ~/.solarized
-./install.sh
+echo "Set Theme to Powerlevel10k"
+sed -i 's/ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/g' ~/.zshrc
+echo "Restart / open new terminal to configure Powerlevel10k"
+echo
