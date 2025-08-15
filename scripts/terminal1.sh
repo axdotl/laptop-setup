@@ -13,5 +13,8 @@ chsh -s $(which zsh)
 echo "Install fuzzy-finder fzf - https://github.com/junegunn/fzf"
 sudo apt-get install fzf
 
+echo "Install podman - https://podman.io/"
+sudo apt-get install podman
+
 echo "Restart terminal and continue with terminal2.sh"
 echo
