@@ -10,5 +10,8 @@ sudo apt-get install zsh
 echo "Set Zsh as default"
 chsh -s $(which zsh)
 
+echo "Install fuzzy-finder fzf - https://github.com/junegunn/fzf"
+sudo apt-get install fzf
+
 echo "Restart terminal and continue with terminal2.sh"
 echo
